@@ -18,7 +18,7 @@ This repository houses the codebase and additional resources for the research co
 
 ## Documentation
 
-Detailed documentation for each aspect of the work, including the architecture of the MLP and LSTM models, data preprocessing steps, and analysis strategy, can be found [here]([https://github.com/ese-msc-2022/irp-sm1122/blob/main/reports/sm1122-finalreport.pdf]).
+Detailed documentation for each aspect of the work, including the architecture of the MLP and LSTM models, data preprocessing steps, and analysis strategy, can be found [here](https://github.com/ese-msc-2022/irp-sm1122/blob/main/reports/sm1122-finalreport.pdf) .
 
 A brief documentaion for part of the functions can be found [here] (https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/doc/build/html). Please downlad the files and open any .html.
 ---
