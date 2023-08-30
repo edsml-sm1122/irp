@@ -18,15 +18,20 @@ This repository houses the codebase and additional resources for the research co
 
 ## Documentation
 
-Detailed documentation for each aspect of the code, including the architecture of the MLP and LSTM models, data preprocessing steps, and analysis scripts, can be found [here](Link-to-Documentation).
+Detailed documentation for each aspect of the work, including the architecture of the MLP and LSTM models, data preprocessing steps, and analysis strategy, can be found [here](https://github.com/ese-msc-2022/irp-sm1122/blob/main/reports/sm1122-finalreport.pdf).
 
+A brief documentaion for part of the functions can be found [here] (https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/doc/build/html). Please downlad the files and open any .html.
 ---
 
-## Code Structure
+## Code explain
 
-### Data Preprocessing
+The codes are in folder codeFinal. This is just part of the work more relative to the report. For more work, please see the [Google Drive] (https://drive.google.com/drive/folders/1l__vH-LfxBH7RtKKLTlmnXzO2cO7QeSU?usp=drive_link).
+
+Most of the work developed on Google colab.
+
+### Data Reading, Vusulization, Analysis
 - `data_preprocessing.py`: Script for preparing and cleaning the dataset.
-  - [Link to Code](#)
+  - [https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/datapre](#)
   - _Description to be updated..._
 
 ### MLP Model
