@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>data_functions module &#8212; IRP ... documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f85b753c"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="utilities module" href="utilities.html" />
+    <link rel="prev" title="codeFinal" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-data_functions">
+<span id="data-functions-module"></span><h1>data_functions module<a class="headerlink" href="#module-data_functions" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.add_points_to_map">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">add_points_to_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.add_points_to_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add points from a numpy array to a folium map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>numpy.ndarray</em>) – Numpy array containing the points with columns ID, latitude, and longitude.</p></li>
+<li><p><strong>map_obj</strong> (<em>folium.folium.Map</em>) – Folium map object.</p></li>
+<li><p><strong>color</strong> (<em>str</em>) – Color for the points, default is “blue”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Always returns 0.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.autocorr">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">autocorr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.autocorr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute and plot the autocorrelation for time series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – A numpy array with shape (tracks, locations, time, parameters). The data represents
+multiple tracks, with multiple locations, over time, and for various parameters.</p></li>
+<li><p><strong>name</strong> (<em>list</em>) – A string representing the title of the plots.</p></li>
+<li><p><strong>name</strong> – A list of strings representing the subtitles of the plots.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of numpy arrays, where each array is the autocorrelation for a given parameter.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[numpy.ndarray]</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The function computes the autocorrelation for each parameter and location. It then plots the
+average autocorrelation for each parameter across all tracks and locations.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.check_nan">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">check_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['MWD(°</span> <span class="pre">from</span> <span class="pre">north)',</span> <span class="pre">'PWP(s)',</span> <span class="pre">'SWH(m)',</span> <span class="pre">'TWD(m)',</span> <span class="pre">'WiD(°</span> <span class="pre">from</span> <span class="pre">north)',</span> <span class="pre">'WiS(m/s)']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.check_nan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the number of NaN values in a provided numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>numpy.ndarray</em>) – Numpy array with data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>0 indicating success.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.checkdim">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">checkdim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_contour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../../data/20230608/TimeSeries_Data_20230607'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['_MWD_',</span> <span class="pre">'_PWP_',</span> <span class="pre">'_SWH_',</span> <span class="pre">'_TWD_',</span> <span class="pre">'_WiD_',</span> <span class="pre">'_WiS_']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.checkdim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if all the .csv files in the given directory have the same shape and if all tracks are the same.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_contour</strong> (<em>str</em>) – Target contour to check.</p></li>
+<li><p><strong>data_folder</strong> (<em>str</em>) – Path to the data folder.</p></li>
+<li><p><strong>parameter_types</strong> (<em>list</em><em> of </em><em>str</em>) – List of parameter types to check.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Maximum time dimension, space dimension, and track dimension found among all CSV files.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.checkdup">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">checkdup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.checkdup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the percentage of duplicate data in the provided numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>numpy.ndarray</em>) – Numpy array with data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Percentage of duplicated data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.convert_to_numpy">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">convert_to_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.convert_to_numpy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the DataFrame into a numpy array containing only ID, X, and Y columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – DataFrame to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Numpy array with columns ID, X, and Y.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.get_elevation">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">get_elevation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.get_elevation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the elevation in meters for a given latitude and longitude using Google Maps Elevation API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat</strong> (<em>float</em>) – Latitude coordinate.</p></li>
+<li><p><strong>lon</strong> (<em>float</em>) – Longitude coordinate.</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – API key for the Google Maps Elevation API.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Elevation in meters or False if there’s an error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.get_elevation_for_array">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">get_elevation_for_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.get_elevation_for_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get elevation data for all points in a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>numpy.ndarray</em>) – Numpy array with columns ID, latitude, and longitude.</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – API key for the Google Maps Elevation API.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new numpy array containing ID, latitude, longitude, and elevation columns.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.haversine_distance">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">haversine_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loc1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.haversine_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the Haversine distance between two points on the Earth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loc1</strong> (<em>list</em>) – First location in the format [points ID, latitude, longitude].</p></li>
+<li><p><strong>loc2</strong> (<em>list</em>) – Second location in the format [points ID, latitude, longitude].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance in kilometers between the two points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.plot_elevation">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">plot_elevation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.plot_elevation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the elevation values from a provided data array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_array</strong> (<em>numpy.ndarray</em>) – A numpy array where the first column represents IDs and the last column
+represents elevations. The array should be structured as [ID, …, Elevation].</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>0 indicating success.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function assumes that the elevation is the last column in the data_array.
+The plot generated will have IDs on the x-axis and elevations on the y-axis.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.plotarr">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">plotarr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['MWD(°</span> <span class="pre">from</span> <span class="pre">north)',</span> <span class="pre">'PWP(s)',</span> <span class="pre">'SWH(m)',</span> <span class="pre">'TWD(m)',</span> <span class="pre">'WiD(°</span> <span class="pre">from</span> <span class="pre">north)',</span> <span class="pre">'WiS(m/s)']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.plotarr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the quantiles (25%, 50%, 75%) and the mean for each feature in the given array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>numpy.ndarray</em>) – Numpy array with data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>0 indicating success.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.read_save">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">read_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_contour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../../data/20230608/TimeSeries_Data_20230607'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['_MWD_',</span> <span class="pre">'_PWP_',</span> <span class="pre">'_SWH_',</span> <span class="pre">'_TWD_',</span> <span class="pre">'_WiD_',</span> <span class="pre">'_WiS_']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.read_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a zero-filled array with the maximum dimension, then fill in the data from the .csv files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_contour</strong> (<em>str</em>) – Target contour to read.</p></li>
+<li><p><strong>savepath</strong> (<em>str</em>) – Path to save the numpy array.</p></li>
+<li><p><strong>track_dim</strong> (<em>int</em>) – Number of tracks.</p></li>
+<li><p><strong>time_dim</strong> (<em>int</em>) – Maximum number of time points.</p></li>
+<li><p><strong>space_dim</strong> (<em>int</em>) – Maximum number of space points.</p></li>
+<li><p><strong>data_folder</strong> (<em>str</em>) – Path to the data folder.</p></li>
+<li><p><strong>parameter_types</strong> (<em>list</em><em> of </em><em>str</em>) – List of parameter types to read.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>0 indicating success.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_functions.track_order">
+<span class="sig-prename descclassname"><span class="pre">data_functions.</span></span><span class="sig-name descname"><span class="pre">track_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_contour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../../data/20230608/TimeSeries_Data_20230607'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['_MWD_',</span> <span class="pre">'_PWP_',</span> <span class="pre">'_SWH_',</span> <span class="pre">'_TWD_',</span> <span class="pre">'_WiD_',</span> <span class="pre">'_WiS_']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_functions.track_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the order of the tracks for a given contour.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_contour</strong> (<em>str</em>) – Target contour to check order for.</p></li>
+<li><p><strong>data_folder</strong> (<em>str</em>) – Path to the data folder.</p></li>
+<li><p><strong>parameter_types</strong> (<em>list</em><em> of </em><em>str</em>) – List of parameter types to check.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Order of the tracks for the given contour if same order.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IRP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">codeFinal</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">data_functions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">utilities module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">codeFinal</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">codeFinal</a></li>
+      <li>Next: <a href="utilities.html" title="next chapter">utilities module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Sitong Mu.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/data_functions.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
