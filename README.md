@@ -35,26 +35,28 @@ Most of the work developed on Google colab.
 ### Data Reading, Vusulization, Analysis
 - `datapre`:
   - [link to codes](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/datapre)
-  - `datafunctions.py` contains all utilities used in the datapre folder.
   - `read_data.ipynb` data reading code from a local dataset with quite complex structure.
   - `explore_data.ipynb` check duplication, nan; plots of data, correlation analysis for better understanding 
   - `pointsLoc.ipynb` a code mainly to download and save elavation data for model target location from Google Map.
     
-### MLP Model
-- `mlp_model.py`: Core implementation of the MLP surrogate model.
-  - [Link to Code](#)
-  - _Description to be updated..._
+### Surragate models
+- `Building_models`: Core implementation of the surrogate models.
+  - [Link to Codes](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/Building_models)
+  - `LSTM.ipynb` Develop the lstm model
+  - `MLP.ipynb` Develop the MLP model
 
-### LSTM Model
-- `lstm_model.py`: Core implementation of the LSTM surrogate model.
-  - [Link to Code](#)
-  - _Description to be updated..._
+### Model generalization and performance
+- `ModelTest_and_Geberalization`: Generalization of model configurations. Several new models are trained and tested.
+  - [Link to Codes](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/ModelTest_and_Generalization)
+  - `space_generalization`  as its name. Note, the functions and classes in these codes are not all merged into `utilities.py` as they are context-specific. 
+  - `General_performance.ipynb` performace of the two models developed in `Building_models` 
+  - `MLP_unseentrack.ipynb` train an MLP on 80% of storm event, test on the left
+  - `MLP_LSTM_timeunseen.ipynb` train a lstm and mlp on the initial 80% of the time series, test on the remaining
 
-### Evaluation Scripts
-- `evaluation_metrics.py`: Script for evaluating model performance.
-  - [Link to Code](#)
-  - _Description to be updated..._
-
+### utilities and test
+  - [`utilities.py`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/utilities.py): utilities for codes developed pn Google Colab (codes that train/run models).
+  - [`datafunctions.py`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/datapre/data_functions.py) utilities for codes in the datapre folder.
+    
 ---
 
 ## Getting Started
