@@ -56,6 +56,7 @@ Most of the work developed on Google colab.
 ### utilities and test
   - [`utilities.py`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/utilities.py): utilities for codes developed pn Google Colab (codes that train/run models).
   - [`datafunctions.py`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/datapre/data_functions.py) utilities for codes in the datapre folder.
+  - [`test.ipynb`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/tests.ipynb) testing functions in the two sforementioned `.py` files.
     
 ---
 
@@ -71,7 +72,7 @@ To clone this repository and set up a local development environment, follow thes
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ese-msc-2022/irp-sm1122/edit/main/codeFinal/LICENSE.md) file for details.
 
 ---
 
