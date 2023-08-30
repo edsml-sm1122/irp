@@ -4,6 +4,8 @@
 
 This repository houses the codebase and additional resources for the research conducted on utilizing Multilayer Perceptrons (MLPs) and Long Short-Term Memory networks (LSTMs) as surrogate models in the domain of hybrid wave downscaling. The objective is to predict Significant Wave Height (SWH) at coastlines from wave-related parameters at offshore 25m contour points. The research investigates the model's performance and generalization abilities across different spatial and temporal scales.
 
+The research location. [map](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/datapre/map.html) The models predict from wave related variables at red points (25m contour) to blue points(coastline). 
+
 ---
 
 ## Table of Contents
@@ -78,9 +80,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Acknowledgments
 
-- This work has been conducted at [Institution/Department].
-- Advisors: [Names and affiliations]
+- This work has been conducted as an external msc project between Imperial College London and Moody's RMS.
+- Supervisors: Dr. Christopher Thomas, Prof. Matthew Piggott
 
----
-
-Feel free to customize this template according to your specific needs. The mock texts and links are placeholders for the actual content you will insert.
