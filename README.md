@@ -36,8 +36,11 @@ The codes are in folder codeFinal. This is just part of the work more relative t
 
 Most of the work developed on Google colab.  
 
-The data is  <span style="color:red">*CONFEDENTIAL*</span>.  
+```diff
 
+The data is  <span style="color:red">*CONFEDENTIAL*</span>.
+
+```
 Some of the models are uploaded [here](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/models). However, this is not the file structure when models are developed, you won't be able to run the codes without changing path.
 
 ### Data Reading, Vusulization, Analysis
