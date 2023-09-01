@@ -34,8 +34,10 @@ Please downlad the files and open any .html.
 
 The codes are in folder codeFinal. This is just part of the work more relative to the report. For more work, please see the [Google Drive](https://drive.google.com/drive/folders/1l__vH-LfxBH7RtKKLTlmnXzO2cO7QeSU?usp=drive_link).
 
-Most of the work developed on Google colab.
-The data is ***confidential***.
+Most of the work developed on Google colab.  
+
+The data is  <span style="color:red">***confidential***</span>.  
+
 Some of the models are uploaded [here](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/models). However, this is not the file structure when models are developed, you won't be able to run the codes without changing path.
 
 ### Data Reading, Vusulization, Analysis
