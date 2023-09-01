@@ -1,3 +1,4 @@
+# Name: Sitong Mu; Github username: edsml-sm1122
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import correlate

@@ -1,0 +1,17 @@
+numpy
+matplotlib
+scipy
+statsmodels
+folium
+pandas
+requests
+pandas
+pathlib
+torch
+torchvision
+tqdm
+scikit-learn
+torchsummary
+sphinx
+pycm
+livelossplot
