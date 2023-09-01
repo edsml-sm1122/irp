@@ -1,5 +1,7 @@
 # Surrogate Modeling for Hybrid Wave Downscaling using MLP and LSTM
 
+(in Python)
+
 ## Introduction
 
 This repository houses the codebase and additional resources for the research conducted on utilizing Multilayer Perceptrons (MLPs) and Long Short-Term Memory networks (LSTMs) as surrogate models in the domain of hybrid wave downscaling. The objective is to predict Significant Wave Height (SWH) at coastlines from wave-related parameters at offshore 25m contour points. The research investigates the model's performance and generalization abilities across different spatial and temporal scales.
@@ -20,7 +22,7 @@ The research location. [map](https://github.com/ese-msc-2022/irp-sm1122/blob/mai
 
 ## Documentation
 
-Detailed documentation for each aspect of the work, including the architecture of the MLP and LSTM models, data preprocessing steps, and analysis strategy, can be found [here](https://github.com/ese-msc-2022/irp-sm1122/blob/main/reports/sm1122-finalreport.pdf).
+Detailed documentation for each aspect of the work, including the architecture of the MLP and LSTM models, data preprocessing steps, and analysis strategy, can be found [here](https://github.com/ese-msc-2022/irp-sm1122/blob/main/reports/sm1122-finalreport.pdf). The readme (this) is a brief introduction to help make sense the codes. 
 
 A brief documentaion for part of the functions can be found [here](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/doc/build/html). 
 
@@ -33,6 +35,8 @@ Please downlad the files and open any .html.
 The codes are in folder codeFinal. This is just part of the work more relative to the report. For more work, please see the [Google Drive](https://drive.google.com/drive/folders/1l__vH-LfxBH7RtKKLTlmnXzO2cO7QeSU?usp=drive_link).
 
 Most of the work developed on Google colab.
+The data is ***confidential***.
+Some of the models are uploaded [here](https://github.com/ese-msc-2022/irp-sm1122/tree/main/codeFinal/models). However, this is not the file structure when models are developed, you won't be able to run the codes without changing path.
 
 ### Data Reading, Vusulization, Analysis
 - `datapre`:
@@ -58,7 +62,7 @@ Most of the work developed on Google colab.
 ### utilities and test
   - [`utilities.py`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/utilities.py): utilities for codes developed pn Google Colab (codes that train/run models).
   - [`datafunctions.py`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/datapre/data_functions.py) utilities for codes in the datapre folder.
-  - [`test.ipynb`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/tests.ipynb) testing functions in the two sforementioned `.py` files.
+  - [`test.ipynb`](https://github.com/ese-msc-2022/irp-sm1122/blob/main/codeFinal/tests.ipynb) testing functions in the two sforementioned `.py` files. The file is not written in test.py, but in .ipynb considering inconvenience in importing local packages and run .py on a Google Colab Virtual Machine.
     
 ---
 
